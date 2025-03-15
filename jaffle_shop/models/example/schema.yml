@@ -15,7 +15,7 @@ models:
     description: "Second dbt model"
     columns:
       - name: id
-        description: "The primary key for this table."
+        description: "The primary key for second table."
         data_tests:
           - unique
           - not_null
