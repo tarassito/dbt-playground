@@ -6,7 +6,7 @@ models:
     description: "My first dbt model."
     columns:
       - name: id
-        description: "The primary key for this table"
+        description: "The primary key for first table"
         data_tests:
           - unique
           - not_null
