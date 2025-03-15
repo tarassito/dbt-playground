@@ -3,7 +3,7 @@ version: 2
 
 models:
   - name: my_first_dbt_model
-    description: "My first dbt model."
+    description: "My first dbt model"
     columns:
       - name: id
         description: "The primary key for first table."
