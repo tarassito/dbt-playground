@@ -12,10 +12,10 @@ models:
           - not_null
 
   - name: my_second_dbt_model
-    description: "Second dbt model"
+    description: "Second dbt model feature 5"
     columns:
       - name: id
-        description: "The primary key for second table. fix5"
+        description: "The primary key for my second table."
         data_tests:
           - unique
           - not_null
