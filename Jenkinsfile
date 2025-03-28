@@ -17,6 +17,7 @@ pipeline {
         stage('Always Runs') {
             steps {
                 echo "This stage runs for all builds."
+                sh 'printenv'
             }
         }
     }
