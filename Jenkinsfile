@@ -9,7 +9,7 @@ pipeline {
             steps {
                 echo 'Hello, World!'
                 echo "$DB_CREDS_USR"
-                echo '$DB_CREDS_PSW'
+                echo "$DB_CREDS_PSW"
             }
         }
     }
