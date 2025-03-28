@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Hello') {
             environment {
-                DB_CREDS = credentials('db-creds')
+                DB_CREDS = credentials('db_creds')
             }
             steps {
                 echo 'Hello, World!'
