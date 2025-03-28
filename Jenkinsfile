@@ -4,12 +4,12 @@ pipeline {
     stages {
         stage('Hello') {
             environment {
-                DB_CREDS = credentials('db_creds')
+                DB_CREDS = credentials('db-creds')
             }
             steps {
                 echo 'Hello, World!'
-                echo $DB_CREDS_USR
-                echo $DB_CREDS_PSW
+                echo '$DB_CREDS_USR'
+                echo '$DB_CREDS_PSW'
             }
         }
     }
