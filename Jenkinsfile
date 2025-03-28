@@ -1,16 +1,22 @@
 pipeline {
-    agent any  // Runs on any available agent
+    agent any
 
     stages {
-        stage('Hello') {
-            environment {
-                DB_CREDS = credentials('check')
+        stage('Run Only for PR to Develop') {
+            when {
+                allOf {
+                    branch 'develop'  // Target branch is develop
+                    changeRequest()  // Ensure it's a PR
+                }
             }
             steps {
-                echo 'Hello, World!'
-                echo "$DB_CREDS_USR"
-                echo "$DB_CREDS_PSW"
-                sh 'printenv'
+                echo "This stage runs only for PRs targeting 'develop' branch!"
+            }
+        }
+
+        stage('Always Runs') {
+            steps {
+                echo "This stage runs for all builds."
             }
         }
     }
