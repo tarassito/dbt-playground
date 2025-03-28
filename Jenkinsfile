@@ -5,8 +5,7 @@ pipeline {
         stage('Run Only for PR to Develop') {
             when {
                 allOf {
-                    branch 'develop'  // Target branch is develop
-                    changeRequest()  // Ensure it's a PR
+                    changeRequest target: 'develop'
                 }
             }
             steps {
